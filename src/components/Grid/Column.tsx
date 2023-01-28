@@ -19,9 +19,9 @@ const generateClasses = ({ sm, md, lg, className }: ColGenPropsI): string => {
   const classes = [];
 
   if (className) classes.push(className);
-  if (sm || sm == 0) classes.push(style[`col-sm-${sm}`]);
-  if (md || md == 0) classes.push(style[`col-md-${md}`]);
-  if (lg || lg == 0) classes.push(style[`col-lg_${lg}`]);
+  if (sm || sm === 0) classes.push(style[`col-sm-${sm}`]);
+  if (md || md === 0) classes.push(style[`col-md-${md}`]);
+  if (lg || lg === 0) classes.push(style[`col-lg-${lg}`]);
 
   return classes.join(" ");
 };
@@ -34,8 +34,9 @@ export const Col: React.FC<ColPropsI> = ({
   className = "",
 }) => {
   const classes = generateClasses({ sm, md, lg, className });
+
   return (
-    <div style={style} className={`${style.col} ${classes}`}>
+    <div className={`${style.col} ${classes}`}>
       {children}
     </div>
   );

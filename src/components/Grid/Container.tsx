@@ -25,7 +25,7 @@ export const Container: React.FC<ContainerPropsI> = ({
   const Component = element || "section";
 
   return (
-    <Component className={clsx(style.container, { [className as any]: className })}>
+    <Component className={clsx(style.container, className)}>
       {children}
     </Component>
   );

@@ -1,12 +1,12 @@
 import { useState, useCallback } from "react";
 import clsx from "clsx";
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
 import { links } from "@/helpers/links";
 
 import { Container } from "@/components/Grid";
-import { Logo, IconClose, IconUnion } from "@/components/icons";
 import Button from "../Button";
 
 import { useIsMobile } from "@/helpers/useIsMobile";
@@ -26,17 +26,36 @@ export const Header = () => {
 
   return (
     <header className={style.header}>
-      <Container element="div">
+      <Container element="div" className={style.wrapper}>
         <nav className={style.nav}>
           <Link href="/" className={style.logo}>
-            <Logo />
+            <Image
+              src="assets/icons/logo.svg"
+              alt="logo"
+              width={111}
+              height={37}
+            />
           </Link>
           {isMobile && (
             <Button
               onClick={mobileMenuOpenHandler}
               className={style.menuButton}
             >
-              {mobileIsOpen ? <IconClose /> : <IconUnion />}
+              {mobileIsOpen ? (
+                <Image
+                  src="assets/icons/iconClose.svg"
+                  alt="close"
+                  width={16}
+                  height={16}
+                />
+              ) : (
+                <Image
+                  src="assets/icons/iconUnion.svg"
+                  alt="open"
+                  width={22}
+                  height={17}
+                />
+              )}
             </Button>
           )}
           <div
