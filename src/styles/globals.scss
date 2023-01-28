@@ -15,6 +15,7 @@ body {
   font-family: Poppins, sans-serif;
   font-size: 16px;
   line-height: 1.5;
+  background-color: $mainBg;
 }
 
 .bodyText {
@@ -24,6 +25,11 @@ body {
   line-height: 32px;
   font-weight: 400;
   color: $bodyColor;
+
+  @media screen and (max-width: $mobile-max-breakpoint) {
+    font-size: 15px;
+    line-height: 26px;
+  }
 
   &__small {
     font-size: 16px;
@@ -38,6 +44,12 @@ body {
   font-size: 40px;
   line-height: 56px;
   color: $titleColor;
+  text-transform: capitalize;
+
+  @media screen and (max-width: $mobile-max-breakpoint) {
+    font-size: 28px;
+    line-height: 42px;
+  }
 
   &__small {
     font-weight: 600;

@@ -6,11 +6,18 @@
   margin: 0 auto;
   padding: 0 80px;
 
+  @media screen and (max-width: $desktop-max-breakpoint) {
+    max-width: 980px;
+    padding: 0;
+  }
+
   @media screen and (max-width: $tablet-max-breakpoint) {
-    padding: 0 40px;
+    max-width: 728px;
+    padding: 0;
   }
 
   @media screen and (max-width: $mobile-max-breakpoint) {
+    max-width: 100%;
     padding: 0 20px;
   }
 }
