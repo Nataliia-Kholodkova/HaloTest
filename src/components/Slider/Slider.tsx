@@ -49,8 +49,8 @@ interface ItemI {
 
 export const NatureSlider = () => {
   const [currSlide, setCurrSlide] = useState(0);
-  const [opacity, setOpacity] = useState(1);
   const ref = useRef<Slider>(null);
+
   const settings = {
     className: clsx(style.slider, "slider variable-width center"),
     arrows: false,
@@ -64,8 +64,6 @@ export const NatureSlider = () => {
     variableWidth: true,
     beforeChange: (current: number, next: number): void => {
       setCurrSlide(next);
-      setOpacity(0.1);
-      setTimeout(() => setOpacity(1), 500);
     },
   };
 
@@ -89,7 +87,6 @@ export const NatureSlider = () => {
     [currSlide]
   );
 
-  console.log(opacity);
   return (
     <section className={style.section}>
       <Slider {...settings} ref={ref}>
@@ -101,7 +98,6 @@ export const NatureSlider = () => {
             isActive={currSlide === i}
             key={i.toString()}
             isScaled={getScale(i)}
-            opacity={opacity}
           />
         ))}
       </Slider>

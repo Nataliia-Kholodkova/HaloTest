@@ -1,0 +1,111 @@
+@import "../../styles/_variables.scss";
+
+.section {
+  width: 100%;
+  padding: 96px 0 88px;
+  background-color: $headerBg;
+
+  @media screen and (max-width: $tablet-min-breakpoint) {
+    padding: 43px 8px 42px;
+  }
+}
+
+.title,
+.text {
+  margin: 0;
+  padding: 0;
+  color: #333333;
+  letter-spacing: 0.3px;
+}
+
+.title {
+  margin-bottom: 38px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 32px;
+
+  @media screen and (max-width: $tablet-min-breakpoint) {
+    margin-bottom: 16px;
+    font-size: 18px;
+  }
+
+  &-large {
+    font-size: 34px;
+    line-height: 48px;
+    letter-spacing: normal;
+    text-transform: uppercase;
+
+    @media screen and (max-width: $tablet-min-breakpoint) {
+      margin-bottom: 2px;
+      font-size: 28px;
+    }
+  }
+}
+
+.text {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 24px;
+
+  @media screen and (max-width: $tablet-min-breakpoint) {
+    font-size: 12px;
+  }
+}
+
+.rights {
+  @media screen and (max-width: $tablet-min-breakpoint) {
+    margin-bottom: 15px;
+
+    br {
+      display: none;
+    }
+  }
+}
+
+.contacts {
+  padding-top: 17px;
+  align-items: center;
+
+  @media screen and (max-width: $tablet-min-breakpoint) {
+    align-items: flex-start;
+  }
+}
+
+.media {
+  padding-top: 17px;
+  align-items: flex-end;
+
+  @media screen and (max-width: $tablet-min-breakpoint) {
+    align-items: flex-start;
+  }
+  &-list {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    list-style: none;
+  }
+
+  &-item {
+    margin-left: 20px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  &-link {
+    svg {
+      transition: 0.3s linear;
+    }
+    &:focus {
+      outline: none;
+    }
+
+    &:hover,
+    &:focus {
+      svg {
+        opacity: 0.8;
+      }
+    }
+  }
+}

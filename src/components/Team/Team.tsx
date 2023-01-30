@@ -1,9 +1,16 @@
 import Image from "next/image";
+import clsx from "clsx";
+import { useRef, MutableRefObject } from "react";
 import { Container, Row, Col } from "@/components/Grid";
+
+import { useOnScreen } from "@/helpers/useOnScreen";
 
 import style from "./Team.module.scss";
 
 export const Team = () => {
+  const ref = useRef() as MutableRefObject<HTMLDivElement>;
+  const isOnScreen = useOnScreen(ref);
+
   return (
     <Container className={style.container} element="section">
       <Row className={style.heading}>
@@ -16,7 +23,7 @@ export const Team = () => {
           </p>
         </Col>
       </Row>
-      <Row className={style.team}>
+      <Row className={clsx(style.team, isOnScreen && style.animated)} ref={ref}>
         <Col lg={4} md={6} sm={4}>
           <Image
             src="/assets/images/team_1.png"

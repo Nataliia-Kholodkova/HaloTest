@@ -98,6 +98,11 @@
     padding: 20px 47px;
     padding-right: 134px;
 
+    @media screen and (max-width: $desktop-large-min-breakpoint) {
+      padding: 20px 42px;
+      padding-right: 120px;
+    }
+
     @media screen and (max-width: $mobile-max-breakpoint) {
       padding: 20px 56px;
       padding-right: 114px;

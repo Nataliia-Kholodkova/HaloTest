@@ -85,29 +85,67 @@
     padding: 15px 0;
     margin-top: 16px;
   }
-}
 
-.leaf {
-  position: absolute;
-  right: -30px;
+  .leaf {
+    position: absolute;
+    right: -30px;
+    animation-timing-function: linear;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-play-state: paused;
 
-  &-pink {
-    top: -20px;
+    &-pink {
+      top: -20px;
+      animation-name: leaf_pink;
 
-    @media screen and (max-width: $tablet-min-breakpoint) {
-      width: 45px;
-      right: -14px;
+      @media screen and (max-width: $tablet-min-breakpoint) {
+        width: 45px;
+        right: -14px;
+      }
+    }
+
+    &-blue {
+      top: 52px;
+      right: -17px;
+      animation-name: leaf_blue;
+
+      @media screen and (max-width: $tablet-min-breakpoint) {
+        width: 31px;
+        right: -11px;
+        top: 32px;
+      }
     }
   }
 
-  &-blue {
-    top: 52px;
-    right: -17px;
-
-    @media screen and (max-width: $tablet-min-breakpoint) {
-      width: 31px;
-      right: -11px;
-      top: 32px;
+  &:hover {
+    .leaf {
+      animation-play-state: running;
     }
+  }
+}
+
+@keyframes leaf_blue {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(15deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes leaf_pink {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(-15deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
   }
 }

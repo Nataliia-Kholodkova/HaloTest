@@ -56,9 +56,23 @@
     max-width: 100%;
     height: auto;
     object-fit: cover;
+    transition: 0.3s linear;
+    animation-name: fade;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-play-state: paused;
+    opacity: 0;
+
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 
   div:nth-child(1) {
+    img {
+      animation-delay: 0s;
+    }
     @media screen and (max-width: $tablet-max-breakpoint) {
       margin-bottom: 41px;
 
@@ -72,6 +86,10 @@
     align-items: center;
     justify-content: flex-end;
 
+    img {
+      animation-delay: 0.5s;
+    }
+
     @media screen and (max-width: $tablet-max-breakpoint) {
       margin-bottom: 41px;
       align-items: flex-end;
@@ -84,6 +102,10 @@
 
   div:nth-child(3) {
     align-items: flex-end;
+
+    img {
+      animation-delay: 1s;
+    }
 
     @media screen and (max-width: $tablet-max-breakpoint) {
       align-items: flex-start;
@@ -99,11 +121,18 @@
     position: absolute;
     z-index: -1;
     transition: 0.3s linear;
+    animation-name: fade;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-play-state: paused;
+    opacity: 0;
   }
 
   &-bg__1 {
     top: 10px;
     left: 171px;
+    animation-delay: 0.8s;
 
     @media screen and (max-width: $desktop-min-breakpoint) {
       top: 138px;
@@ -124,6 +153,7 @@
   &-bg__2 {
     bottom: 36px;
     right: 113px;
+    animation-delay: 1.2s;
 
     @media screen and (max-width: $desktop-min-breakpoint) {
       bottom: 157px;
@@ -141,5 +171,21 @@
       bottom: 194px;
       right: 94px;
     }
+  }
+
+  &.animated {
+    .team-member, .team-bg__1, .team-bg__2 {
+      animation-play-state: running;
+    }
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }

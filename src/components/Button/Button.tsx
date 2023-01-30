@@ -18,19 +18,17 @@ export const Button: React.FC<ButtonPropsI> = ({
   className = "",
   isWhite = false,
   isPink = false,
-}) => {
-  return (
-    <button
-      type={type}
-      onClick={onClick}
-      className={clsx(
-        style.button,
-        isWhite ? style["button-white"] : "",
-        isPink ? style["button-pink"] : "",
-        className
-      )}
-    >
-      {children}
-    </button>
-  );
-};
+}) => (
+  <button
+    type={type}
+    onClick={onClick}
+    className={clsx(
+      style.button,
+      isWhite ? style["button-white"] : "",
+      isPink ? style["button-pink"] : "",
+      className
+    )}
+  >
+    {children}
+  </button>
+);

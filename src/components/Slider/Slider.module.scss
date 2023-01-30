@@ -21,6 +21,7 @@
       padding: 0;
       overflow: visible !important;
       overflow-x: clip !important;
+      height: 400px;
 
       @media screen and (max-width: $mobile-max-breakpoint) {
         height: 356px;
@@ -104,6 +105,7 @@
     background-image: url("/assets/images/bg.png");
     background-repeat: no-repeat;
     background-size: auto;
+    background-position: center;
 
     @media screen and (max-width: $mobile-max-breakpoint) {
       background-size: contain;

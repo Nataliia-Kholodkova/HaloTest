@@ -4,11 +4,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-import { links } from "@/helpers/links";
-
 import { Container } from "@/components/Grid";
 import Button from "../Button";
 
+import { links } from "@/helpers/links";
 import { useIsMobile } from "@/helpers/useIsMobile";
 
 import style from "./Header.module.scss";

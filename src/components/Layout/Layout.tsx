@@ -1,5 +1,5 @@
 import Header from "@/components/Header";
-import Hero from "@/components/Hero";
+import Footer from "@/components/Footer";
 
 interface LayoutPropsI {
   withHero?: boolean;
@@ -10,5 +10,6 @@ export const Layout: React.FC<LayoutPropsI> = ({ children }) => (
   <>
     <Header />
     <main>{children}</main>
+    <Footer />
   </>
 );
