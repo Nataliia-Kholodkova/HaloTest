@@ -24,31 +24,46 @@ export const Team = () => {
         </Col>
       </Row>
       <Row className={clsx(style.team, isOnScreen && style.animated)} ref={ref}>
-        <Col lg={4} md={6} sm={4}>
+        <Col
+          lg={4}
+          md={6}
+          sm={4}
+          className={clsx(style["team-member"], style["team-member__1"])}
+        >
           <Image
             src="/assets/images/team_1.png"
             alt="Team member"
             width={323}
             height={274}
-            className={style["team-member"]}
+            className={style["team-member__image"]}
           />
         </Col>
-        <Col lg={4} md={6} sm={4}>
+        <Col
+          lg={4}
+          md={6}
+          sm={4}
+          className={clsx(style["team-member"], style["team-member__2"])}
+        >
           <Image
             src="/assets/images/team_2.png"
             alt="Team member"
             width={334}
             height={263}
-            className={style["team-member"]}
+            className={style["team-member__image"]}
           />
         </Col>
-        <Col lg={4} md={6} sm={4}>
+        <Col
+          lg={4}
+          md={6}
+          sm={4}
+          className={clsx(style["team-member"], style["team-member__3"])}
+        >
           <Image
             src="/assets/images/team_3.png"
             alt="Team member"
             width={276}
             height={312}
-            className={style["team-member"]}
+            className={style["team-member__image"]}
           />
         </Col>
         <Image

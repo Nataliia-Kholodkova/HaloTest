@@ -1,0 +1,55 @@
+@import "../../styles/_variables.scss";
+
+.section {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    overflow: hidden;
+
+}
+
+.row {
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+
+    div:first-child {
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.parrot {
+    svg {
+        max-width: 75%;
+        animation: parrot 5s linear infinite both;
+    }
+
+    @media screen and (max-width: $mobile-max-breakpoint) {
+        margin-top: 40px;
+      }
+}
+
+@keyframes parrot {
+    0% {
+        transform: rotate(20deg);
+    }
+
+    25% {
+        transform: rotate(0);
+    }
+
+    50% {
+        transform: rotate(-20deg);
+    }
+
+    75% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(20deg);
+    }
+}

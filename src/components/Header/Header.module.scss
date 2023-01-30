@@ -24,6 +24,10 @@
   &:hover {
     img {
       transform: scale(1.1);
+
+      @media screen and (max-width: $mobile-max-breakpoint) {
+        transform: none;
+      }
     }
   }
 
