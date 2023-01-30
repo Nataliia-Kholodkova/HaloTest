@@ -4,7 +4,7 @@ export const useIsMobile = () => {
 
   useEffect(() => {
     const isMobileWidth = () => {
-      if (window.innerWidth <= 767) {
+      if (window.innerWidth < 767) {
         setIsMobile(true);
         return;
       }

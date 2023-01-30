@@ -1,0 +1,144 @@
+@import "../../styles/_variables.scss";
+
+.section {
+  background-color: $sectionBg;
+  padding: 104px 0 100px;
+
+  overflow: hidden;
+
+  @media screen and (max-width: $mobile-max-breakpoint) {
+    padding: 20px 0 68px;
+  }
+}
+
+.slider {
+  :global {
+    .slick-track {
+      display: flex;
+    }
+
+    .slick-list {
+      padding: 0;
+      overflow: visible !important;
+      overflow-x: clip !important;
+
+      @media screen and (max-width: $mobile-max-breakpoint) {
+        height: 356px;
+      }
+    }
+    .slick-slide {
+      height: inherit !important;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      transition: 0.3s linear;
+      min-width: 362px;
+
+      img {
+        max-width: 100%;
+        min-width: 210px;
+        height: auto;
+        transition: 0.3s linear;
+        position: relative;
+      }
+
+      &.slick-current {
+        position: relative;
+        min-width: 438px;
+        @media screen and (max-width: $mobile-max-breakpoint) {
+          min-width: 375px;
+        }
+
+        img {
+          position: absolute;
+          top: -10px;
+          left: 33px;
+          transform: scale(0.9);
+          transition: 0.3s linear;
+
+          @media screen and (max-width: $mobile-max-breakpoint) {
+            top: 14px;
+            left: 6px;
+            transform: scale(0.6);
+          }
+        }
+      }
+
+      div {
+        height: 100%;
+        width: 100%;
+
+        div {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}
+
+.sliderItem {
+  position: relative;
+
+  transition: 0.2s linear;
+
+  .title {
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    color: $white;
+    transition: 0.3s linear;
+  }
+
+  &__active {
+    background-image: url("/assets/images/bg.png");
+    background-repeat: no-repeat;
+    background-size: auto;
+
+    @media screen and (max-width: $mobile-max-breakpoint) {
+      background-size: contain;
+      background-position: center;
+    }
+    .title {
+      margin: 81px 0 8px;
+      color: $bodyColor;
+      position: static;
+    }
+
+    .text {
+      max-width: 58%;
+    }
+  }
+}
+
+.pages {
+  max-width: 140px;
+  margin: 10px auto 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .button {
+    font-size: 24px;
+  }
+
+  &-text {
+    font-size: 24px;
+    color: rgba($black, 0.2);
+    transition: 0.3s linear;
+
+    &__current {
+      color: $black;
+    }
+  }
+}

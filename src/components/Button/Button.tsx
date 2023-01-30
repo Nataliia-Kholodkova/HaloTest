@@ -5,7 +5,7 @@ import style from "./Button.module.scss";
 interface ButtonPropsI {
   type?: "button" | "submit" | "reset";
   className?: string;
-  onClick: () => void;
+  onClick: (arg: any | undefined) => void;
   children?: string | React.ReactNode;
   isWhite?: boolean;
   isPink?: boolean;

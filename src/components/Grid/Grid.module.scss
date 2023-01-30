@@ -23,18 +23,18 @@
 }
 
 .row {
-  --column: calc(100% / 12);
+  --column: calc(100% / 4);
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
 
-  @media (max-width: $desktop-min-breakpoint) {
+  @media (min-width: $tablet-min-breakpoint) {
     --column: calc(100% / 6);
   }
 
-  @media (max-width: $tablet-min-breakpoint) {
-    --column: calc(100% / 4);
-  }  
+  @media (min-width: $desktop-min-breakpoint) {
+    --column: calc(100% / 12);
+  }
 }
 
 .col {

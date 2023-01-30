@@ -1,0 +1,47 @@
+@import "../../styles/_variables.scss";
+
+.section {
+  padding-top: 192px;
+  padding-bottom: 163px;
+
+  @media screen and (max-width: $mobile-max-breakpoint) {
+    padding-top: 96px;
+    padding-bottom: 52px;
+  }
+}
+
+.wrapper {
+  &-content {
+    padding-right: 76px;
+    align-items: flex-start;
+
+    @media screen and (max-width: $tablet-max-breakpoint) {
+      padding-right: 20px;
+    }
+
+    @media screen and (max-width: $tablet-min-breakpoint) {
+      padding-right: 0px;
+      margin-bottom: 44px;
+    }
+
+    .button {
+      padding: 15px 37px;
+    }
+
+    p {
+      max-width: 87%;
+      margin-bottom: 58px;
+      @media screen and (max-width: $mobile-max-breakpoint) {
+        margin-bottom: 35px;
+      }
+    }
+
+    h2 {
+      margin-bottom: 37px;
+
+      @media screen and (max-width: $mobile-max-breakpoint) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

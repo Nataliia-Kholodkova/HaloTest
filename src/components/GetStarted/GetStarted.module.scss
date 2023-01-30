@@ -1,0 +1,113 @@
+@import "../../styles/_variables.scss";
+
+.row {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 102px 80px;
+  background-color: $sectionBg;
+  border-radius: 20px;
+
+  @media screen and (max-width: $desktop-max-breakpoint) {
+    padding: 96px 40px;
+  }
+
+  @media screen and (max-width: $mobile-max-breakpoint) {
+    padding: 40px 20px 60px;
+  }
+}
+
+.content {
+  justify-content: space-between;
+}
+
+.wrapper {
+  &-content {
+    justify-content: center;
+    @media screen and (max-width: $mobile-max-breakpoint) {
+      padding-left: 24px;
+      margin-bottom: 56px;
+    }
+    h2 {
+      margin-bottom: 37px;
+
+      @media screen and (max-width: $mobile-max-breakpoint) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &-form {
+    padding: 4px 24px 0 35px;
+    @media screen and (max-width: $mobile-max-breakpoint) {
+      padding: 0;
+    }
+  }
+}
+
+.form {
+  position: relative;
+  padding: 40px 55px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: $headerBg;
+  border-radius: 16px;
+
+  @media screen and (max-width: $desktop-max-breakpoint) {
+    padding: 40px 22px;
+  }
+
+  &-title {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 24px;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 56px;
+    text-transform: capitalize;
+    color: $titleColor;
+    text-transform: capitalize;
+
+    @media screen and (max-width: $mobile-max-breakpoint) {
+      font-size: 24px;
+      line-height: 32px;
+    }
+  }
+
+  .label {
+    margin-bottom: 16px;
+  }
+
+  .button {
+    width: 100%;
+    padding: 15px 0;
+    margin-top: 16px;
+  }
+}
+
+.leaf {
+  position: absolute;
+  right: -30px;
+
+  &-pink {
+    top: -20px;
+
+    @media screen and (max-width: $tablet-min-breakpoint) {
+      width: 45px;
+      right: -14px;
+    }
+  }
+
+  &-blue {
+    top: 52px;
+    right: -17px;
+
+    @media screen and (max-width: $tablet-min-breakpoint) {
+      width: 31px;
+      right: -11px;
+      top: 32px;
+    }
+  }
+}
